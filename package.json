@@ -1,0 +1,18 @@
+{
+  "name": "bun-test",
+  "module": "index.ts",
+  "type": "module",
+	"scripts": {
+		"deno-server" : "deno run --allow-net index-deno.ts",
+		"deno-server-32-kib" : "deno --max-http-header-size=32000 run --allow-net index-deno.ts",
+		"node-server" : "node --watch index-node.js",
+		"node-server-32-kib" : "node --max-http-header-size=32000 --watch index-node.js",
+		"bun-server": "bun run --watch index-bun.ts"
+	},
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
